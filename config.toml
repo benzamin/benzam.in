@@ -186,3 +186,6 @@ clientSecret = "" # Your client secret
     repo = ""               # The repo to store comments
     clientId = ""           # Your client ID
     clientSecret = ""       # Your client secret
+
+#follow instructions from:
+#https://medium.com/tensult/aws-hosting-static-website-on-s3-using-a-custom-domain-cd2782758b2c
