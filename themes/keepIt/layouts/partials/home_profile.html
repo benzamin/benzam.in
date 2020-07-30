@@ -3,7 +3,8 @@
     {{ with .Site.Params.avatar}}
     {{ $avatar := .}}
    <div class="avatar">
-        <a href="/posts/"> <img src="{{ (printf "%s%s" $cdn_url $avatar)}}"> </a>
+        <a href="#" target="_blank" onclick="randomSite();"> <img src="{{ (printf "%s%s" $cdn_url $avatar)}}"> </a>
+        <!-- <a href="/posts/" target="_blank"> <img src="{{ (printf "%s%s" $cdn_url $avatar)}}"> </a> -->
     </div>
     {{ end }}
     {{ if or .Params.gravatar.Email (and .Site.Params.gravatar.Email (ne .Params.gravatar.Email false)) }}

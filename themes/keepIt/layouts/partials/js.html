@@ -21,6 +21,18 @@
 {{ else }}
     {{ $main := slice  $jquery $main | resources.Concat "/js/vendor_main.js" | resources.Minify}}
     <script src="{{ printf "%s%s" $cdn_url $main.RelPermalink }}" async=""></script>
+    <script>
+        var sites = [
+            'https://www.youtube.com/watch?v=dQw4w9WgXcQ',
+            'https://www.youtube.com/watch?v=3rzgrP7VA_Q',
+            'https://www.youtube.com/watch?v=j9V78UbdzWI',
+            'https://www.youtube.com/watch?v=qqO915thhkg'
+        ];
+        function randomSite() {
+            var i = parseInt(Math.random() * sites.length);
+            location.href = sites[i];
+        }
+    </script>
 {{ end }}
 
 {{ if eq ( getenv "HUGO_ENV" ) "production" }}
